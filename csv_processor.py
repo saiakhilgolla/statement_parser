@@ -60,7 +60,7 @@ class CSVProcessor:
             raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
 
         file_name = self.file_path.split('/')[-1]  # Get file name from path
-        match = re.match(r'^(.*?)(?=\d)', file_name)
+        match = re.match(r'^(.*?)(?=_\d)', file_name)
 
         if match:
             account_name = match.group(1)
