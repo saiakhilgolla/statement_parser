@@ -8,3 +8,8 @@ add another module / script to keep the list of categories independent. These ar
 enrich banking info:
 1. infer bank and account info from csv name.
 2. a method to find all these details for RBC statements
+
+
+steps:
+1. Add month,year info to csv tables.
+2. Infer category for each txn using chatgpt.py

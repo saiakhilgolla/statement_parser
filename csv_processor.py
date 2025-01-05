@@ -105,11 +105,12 @@ def process_csv(file_path: str):
     return df
 
 # Example Usage
-if __name__ == "__main__":
-    file_path = "data/debit_accounts/Preferred_Package_5886_010525.csv"  # Replace with actual path
+""" if __name__ == "__main__":
+    file_path = "data/debit_accounts/test.csv"  # Replace with actual path
 
     try:
         processed_df = process_csv(file_path)
         print(processed_df.head())
     except Exception as e:
         logging.error(f"An error occurred during processing: {e}")
+ """
