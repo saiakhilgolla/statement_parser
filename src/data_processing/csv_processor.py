@@ -80,7 +80,7 @@ class CSVProcessor:
         return self.df
 
 # Workflow function to process CSV files
-def process_csv(file_path: str):
+def process_csv(file_path: str) -> pd.DataFrame:
     processor = CSVProcessor(file_path)
 
     # Load the CSV file
