@@ -1,3 +1,5 @@
+"This module processes csv files with transactions"
+
 import pandas as pd
 import re
 import logging
