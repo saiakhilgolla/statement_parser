@@ -52,9 +52,9 @@ class CategorizeTransaction:
             return f"Error: {str(e)}"
 
 # Example Usage
-txn = "2024-11-15, Investment, Wealthsimple Investments Inc., Debit, -1300"
+""" txn = "2024-11-15, Investment, Wealthsimple Investments Inc., Debit, -1300"
 categorizer = CategorizeTransaction(txn)
 
-# Replace 'your_api_key_here' with your actual OpenAI API key
+
 category = categorizer.get_category()
-print(category)
+print(category) """

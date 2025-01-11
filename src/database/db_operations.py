@@ -1,5 +1,5 @@
 import sqlite3
-from db_connector import get_sqlite3_connector
+
 
 def insert_transactions(conn:sqlite3.Connection, row_data:dict):
 	#insert new rows into Transactions table
@@ -19,11 +19,11 @@ def insert_transactions(conn:sqlite3.Connection, row_data:dict):
 							''', row_data)
 	except sqlite3.IntegrityError:
 		print("couldn't add a row twice")
-	return()
+	return(print("Data successfully loaded in to Transactions table"))
 
 
 
-conn = get_sqlite3_connector("./src/database/MonthlyExpenses.db")
+""" conn = get_sqlite3_connector("./src/database/MonthlyExpenses.db")
 data = {"MonthYear": "November 2024",
 		"Date": "2024-11-03",
 		"Description": "test",
@@ -33,4 +33,4 @@ data = {"MonthYear": "November 2024",
 		"AccountType": "Chequing",
 		"AccountName": "preferred Package",
 		"Category": "example"}
-insert_transactions(conn, data)
+insert_transactions(conn, data) """
