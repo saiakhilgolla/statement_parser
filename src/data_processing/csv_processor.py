@@ -8,6 +8,9 @@ from typing import Optional
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# TODO: ADD THIS IN CONFIG FILE
+col_names = ['MonthYear', 'Date', 'Description', 'SubDescription', 'TransactionType', 'Amount', 'AccountType', 'AccountName']
+
 class CSVProcessor:
     def __init__(self, file_path: str):
         self.file_path = file_path
@@ -38,7 +41,7 @@ class CSVProcessor:
             raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
 
         try:
-            self.df["Month_Year"] = self.df["Filter"].iloc[0].split(",")[0]
+            self.df.insert(loc=0, column="MonthYear", value= self.df["Filter"].iloc[0].split(",")[0])
             logging.info("Added Month_Year column.")
         except KeyError:
             logging.error("Column 'Filter' is missing in the DataFrame.")
@@ -53,7 +56,7 @@ class CSVProcessor:
             raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
 
         account_type = "Chequing" if "debit_accounts" in self.file_path else "Credit Card"
-        self.df["Account_Type"] = account_type
+        self.df["AccountType"] = account_type
         logging.info(f"Added Account_Type column with value: {account_type}")
         return self.df
 
@@ -66,7 +69,7 @@ class CSVProcessor:
 
         if match:
             account_name = match.group(1)
-            self.df["Account_Name"] = account_name
+            self.df["AccountName"] = account_name
             logging.info(f"Added Account_Name column with value: {account_name}")
         else:
             logging.warning("Could not extract account name from file name.")
@@ -98,21 +101,24 @@ def process_csv(file_path: str) -> pd.DataFrame:
 
     # Drop columns based on file type
     if "debit_accounts" in file_path:
-        df = processor.drop_columns(["Filter"])
+        df = processor.drop_columns(["Filter", "Balance" ])
+        #print(df.columns)
     else:
         df = processor.drop_columns(["Filter", "Status"])
+        print(df.columns)
 
+	#rename cols to align with table col names
+    df.columns = col_names
 
     logging.info("CSV processing completed.")
     return df
 
 # Example Usage
-""" if __name__ == "__main__":
-    file_path = "data/debit_accounts/test.csv"  # Replace with actual path
+if __name__ == "__main__":
+    file_path = "data/debit_accounts/Preferred_Package_5886_010525.csv"  # Replace with actual path
 
     try:
         processed_df = process_csv(file_path)
         print(processed_df.head())
     except Exception as e:
         logging.error(f"An error occurred during processing: {e}")
- """

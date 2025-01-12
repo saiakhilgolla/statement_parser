@@ -25,7 +25,7 @@ def initialize_database(conn:sqlite3.Connection):
 	conn.close()
 
 def main():
-	conn = get_sqlite3_connector("./src/database/MonthlyExpenses.db")
+	conn = get_sqlite3_connector("src/database/MonthlyExpenses.db")
 	initialize_database(conn)
 
 if __name__ == "__main__":
