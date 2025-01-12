@@ -5,6 +5,8 @@ from src.database.db_operations import insert_transactions
 from src.utils.path_utils import get_file_list, validate_file_list
 from src.database.db_connector import get_sqlite3_connector
 
+# TODO: ADD DEBIT AND CREDIT TRANSACTIONS IN DIFFERENT TABLES TO KEEP TRACK OF BALANCE
+
 # Configuration file paths
 CONFIG = {
     "debit_path": "data/debit_accounts",

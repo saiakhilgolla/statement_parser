@@ -1,6 +1,8 @@
 import sqlite3
 from db_connector import get_sqlite3_connector
 
+# TODO: ADD PRIMARY KEY TO THE TABLE
+
 def initialize_database(conn:sqlite3.Connection):
 	"""Initialize the database and create 'Transactions' table if it already doesn't exist"""
 	#initiate cursor object

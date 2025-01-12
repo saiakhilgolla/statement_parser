@@ -21,7 +21,8 @@ def insert_transactions(conn:sqlite3.Connection, row_data:dict):
 		print("couldn't add a row twice")
 	return(print("Data successfully loaded in to Transactions table"))
 
-
+# TODO: ADD FUNCTION TO REMOVE/ DELETE ROWS BASED ON FILTERS
+# TODO: ADD FUNCTION TO QUERY DATA FROM DB TABLE
 
 """ conn = get_sqlite3_connector("./src/database/MonthlyExpenses.db")
 data = {"MonthYear": "November 2024",

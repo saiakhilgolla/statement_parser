@@ -43,6 +43,7 @@ class CategorizeTransaction:
 					Education
 					Insurance
 					Investments and Savings
+					Income or Salary
 					Miscellaneous
 					Personal and Household Expenses"""},
 					{"role": "user", "content": prompt}]
@@ -58,3 +59,6 @@ categorizer = CategorizeTransaction(txn)
 
 category = categorizer.get_category()
 print(category) """
+
+# TODO: ADD FUNCTIONS TO RECATEGORIZE CERTAIN TRANSACTIONS AND TRAIN CHATGPT
+# TODO:
