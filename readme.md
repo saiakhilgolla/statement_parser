@@ -45,6 +45,7 @@ This directory contains scripts to:
 ## **Future Enhancements**
 - **Analytics Dashboards:** Integrate visualization tools to track expenses by categories, sub-categories, or over time.
 - **Mobile/Cloud Integration:** Extend the tracker for mobile or cloud-based access.
+- Error Handling for gpt
 
 ---
 

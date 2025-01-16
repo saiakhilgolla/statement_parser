@@ -21,6 +21,21 @@ def insert_transactions(conn:sqlite3.Connection, row_data:dict):
 		print("couldn't add a row twice")
 	return(print("Data successfully loaded in to Transactions table"))
 
+def fetch_transactions_data(conn:sqlite3.Connection) -> dict:
+	try:
+		with conn:
+			data = conn.execute("SELECT * FROM Transactions")
+	except Exception as e:
+		print(f'Exception {e} occured')
+	return (data.fetchall())
+
+def get_total_monthly_expense(conn:sqlite3.Connection):
+	try:
+		with conn:
+			data = conn.execute("SELECT MonthYear, Amount, AccountName, Category FROM Transactions WHERE TransactionType = 'Debit'")
+	except Exception as e:
+		print(f'Exception {e} occured')
+	return(data.fetchall())
 # TODO: ADD FUNCTION TO REMOVE/ DELETE ROWS BASED ON FILTERS
 # TODO: ADD FUNCTION TO QUERY DATA FROM DB TABLE
 
