@@ -1,7 +1,12 @@
 import sqlite3
+import pandas as pd
+from src.database.db_operations import fetch_transactions_data
 
 conn = sqlite3.connect("src/database/MonthlyExpenses.db")
-cursor = conn.cursor()
+#print(fetch_transactions_data(conn))
 
-data = cursor.execute("SELECT * FROM Transactions")
-print(data.fetchall())
+data = conn.execute("SELECT * FROM Transactions WHERE MonthYear = 'November 2024'")
+
+df = pd.DataFrame(data.fetchall(), columns = ['MonthYear', 'Date', 'Description', 'SubDescription', 'TransactionType', 'Amount', 'AccountType', 'AccountName', 'Category'])
+print(df)
+df.to_csv('november_data.csv')
