@@ -32,7 +32,7 @@ def fetch_transactions_data(conn:sqlite3.Connection) -> dict:
 def get_total_monthly_expense(conn:sqlite3.Connection):
 	try:
 		with conn:
-			data = conn.execute("SELECT MonthYear, Amount, AccountName, Category FROM Transactions WHERE TransactionType = 'Debit'")
+			data = conn.execute("SELECT MonthYear, SUM(ABS(Amount)) AS Total_Expense FROM Transactions WHERE TransactionType = 'Debit' AND AccountType ='Credit Card' GROUP BY MonthYear")
 	except Exception as e:
 		print(f'Exception {e} occured')
 	return(data.fetchall())

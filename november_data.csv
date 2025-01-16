@@ -1,0 +1,105 @@
+,MonthYear,Date,Description,SubDescription,TransactionType,Amount,AccountType,AccountName,Category
+0,November 2024,2024-11-30,WITHDRAWAL,Free Interac E-Transfer ,Debit,-2600.0,Chequing,Preferred_Package,Category: Miscellaneous
+1,November 2024,2024-11-30,WITHDRAWAL,Free Interac E-Transfer ,Debit,-400.0,Chequing,Preferred_Package,Category: Miscellaneous
+2,November 2024,2024-11-29,DEPOSIT,Free Interac E-Transfer ,Credit,2600.0,Chequing,Preferred_Package,Category: Miscellaneous
+3,November 2024,2024-11-29,CRD. Card Bill Payment, ,Debit,-283.06,Chequing,Preferred_Package,Category: Utilities
+4,November 2024,2024-11-28,Payroll Deposit,Scotiabank ,Credit,2803.22,Chequing,Preferred_Package,Category: Miscellaneous
+5,November 2024,2024-11-15,Investment,Wealthsimple Investments Inc. ,Debit,-1300.0,Chequing,Preferred_Package,Category: Investments and Savings
+6,November 2024,2024-11-14,Customer Transfer Dr.,Mb-Transfer ,Debit,-200.0,Chequing,Preferred_Package,Category: Miscellaneous
+7,November 2024,2024-11-14,Customer Transfer Dr.,Mb-Transfer ,Debit,-1200.0,Chequing,Preferred_Package,Category: Miscellaneous
+8,November 2024,2024-11-14,Customer Transfer Dr.,Mb-Credit Card/Loc Pay. ,Debit,-250.0,Chequing,Preferred_Package,Category: Miscellaneous
+9,November 2024,2024-11-14,Bill Payment,Mb-Royal Bank Visa 01808686,Debit,-500.0,Chequing,Preferred_Package,Category: Utilities
+10,November 2024,2024-11-14,Payroll Deposit,Scotiabank ,Credit,2803.22,Chequing,Preferred_Package,Category: Miscellaneous
+11,November 2024,2024-11-12,Service Charge, ,Debit,0.0,Chequing,Preferred_Package,Category: Miscellaneous
+12,November 2024,2024-11-12,ABM Withdrawal, ,Debit,-21.5,Chequing,Preferred_Package,Category: Miscellaneous
+13,November 2024,2024-11-07,DEPOSIT,Free Interac E-Transfer ,Credit,5.0,Chequing,Preferred_Package,Category: Miscellaneous
+14,November 2024,2024-11-05,DEPOSIT,Free Interac E-Transfer ,Credit,30.0,Chequing,Preferred_Package,Category: Miscellaneous
+15,November 2024,2024-11-04,DEPOSIT,Free Interac E-Transfer ,Credit,35.0,Chequing,Preferred_Package,Category: Miscellaneous
+16,November 2024,2024-11-04,Customer Transfer Dr.,Mb-Credit Card/Loc Pay. ,Debit,-800.0,Chequing,Preferred_Package,Category: Miscellaneous
+17,November 2024,2024-11-04,WITHDRAWAL,Free Interac E-Transfer ,Debit,-2600.0,Chequing,Preferred_Package,Category: Miscellaneous
+18,November 2024,2024-11-04,DEPOSIT,Free Interac E-Transfer ,Credit,2600.0,Chequing,Preferred_Package,Category: Investments and Savings
+19,November 2024,2024-11-01,DEPOSIT,Free Interac E-Transfer ,Credit,43.42,Chequing,Preferred_Package,Category: Investments and Savings
+20,November 2024,2024-11-29,SCOTIABANK TRANSIT,Toronto On,Credit,-283.06,Credit Card,Scene_Visa_card,Category: Transportation
+21,November 2024,2024-11-27,Bell Canada,Montreal Qc,Debit,101.7,Credit Card,Scene_Visa_card,Utilities
+22,November 2024,2024-11-21,Apple Bill,866-712-7753 On (Apple Pay),Debit,4.51,Credit Card,Scene_Visa_card,Subscriptions and Memberships
+23,November 2024,2024-11-18,Google One,G.Co/Helppay#Ns,Debit,4.51,Credit Card,Scene_Visa_card,Category: Subscriptions and Memberships
+24,November 2024,2024-11-14,A MEDIUM,4155085008 De,Debit,7.18,Credit Card,Scene_Visa_card,Miscellaneous
+25,November 2024,2024-11-08,SCOTIA SCCP PREMIUM,,Debit,2.75,Credit Card,Scene_Visa_card,Category: Insurance
+26,November 2024,2024-11-06,Amazon Prime,Amazon.Ca/Pribc,Debit,11.29,Credit Card,Scene_Visa_card,Category: Subscriptions and Memberships
+27,November 2024,2024-11-04,Temu,Www. Bc,Debit,47.75,Credit Card,Scene_Visa_card,Category: Shopping
+28,November 2024,2024-11-04,Virgin Plus,Verdun Qc,Debit,39.55,Credit Card,Scene_Visa_card,Category: Subscriptions and Memberships
+29,November 2024,2024-11-04,Temu,Www. Bc,Debit,16.33,Credit Card,Scene_Visa_card,Category: Shopping
+30,November 2024,2024-11-04,Temu,Www. Bc,Debit,6.16,Credit Card,Scene_Visa_card,Shopping
+31,November 2024,2024-11-30,Uber Eats,Https://Help.020,Debit,36.11,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+32,November 2024,2024-11-29,Presto,Toronto 020 (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Category: Transportation
+33,November 2024,2024-11-29,McDonald's,Toronto 020 (Apple Pay),Debit,6.76,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+34,November 2024,2024-11-29,Amazon,Amazon.Ca 020,Debit,41.35,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+35,November 2024,2024-11-29,IKEA,Toronto 020 (Apple Pay),Debit,96.76,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+36,November 2024,2024-11-28,Amazon,Amazon.Ca 020,Debit,41.06,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+37,November 2024,2024-11-27,Dollarama,Toronto 020 (Apple Pay),Debit,80.96,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+38,November 2024,2024-11-27,IKEA,Burlington 020,Debit,62.15,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+39,November 2024,2024-11-27,SLANTED DOOR,Toronto 020 (Apple Pay),Debit,5.65,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+40,November 2024,2024-11-26,Uber Eats,Https://Help.020,Debit,48.94,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+41,November 2024,2024-11-25,Enterprise Rent-A-Car,Mississauga 020,Debit,42.92,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+42,November 2024,2024-11-24,Presto,Toronto 020 (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Category: Transportation
+43,November 2024,2024-11-24,FRESHLY SQUEEZED DUFFE FR,Toronto 020 (Apple Pay),Debit,7.9,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+44,November 2024,2024-11-24,ANJAPPAR CHETTINAD RESTAU,Mississauga 020 (Apple Pay),Debit,51.29,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+45,November 2024,2024-11-24,Urban Planet,Niagara-Lk 020 (Apple Pay),Debit,52.55,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+46,November 2024,2024-11-24,Gap,Niagara-Lk 020 (Apple Pay),Debit,33.04,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+47,November 2024,2024-11-24,Saks,Niagara-On-Th020 (Apple Pay),Debit,45.19,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+48,November 2024,2024-11-24,MADRASPEPPERS,Mississauga 020 (Apple Pay),Debit,51.92,Credit Card,Scotiabank_Gold_Amex_Card,Category: Groceries
+49,November 2024,2024-11-24,Walmart,Mississauga 020 (Apple Pay),Debit,57.8,Credit Card,Scotiabank_Gold_Amex_Card,Category: Groceries
+50,November 2024,2024-11-24,SZECHUAN EXPRESS,Niagara On Th020 (Apple Pay),Debit,21.7,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+51,November 2024,2024-11-24,Uber One,Https://Help.020,Debit,11.29,Credit Card,Scotiabank_Gold_Amex_Card,Category: Transportation
+52,November 2024,2024-11-24,Uber Eats,Https://Help.020,Debit,22.65,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+53,November 2024,2024-11-24,Columbia Sportswear,London 020 (Apple Pay),Debit,33.89,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+54,November 2024,2024-11-24,Bath & Body Works,Niagara On Th020 (Apple Pay),Debit,22.6,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+55,November 2024,2024-11-24,Guess,Montreal 022 (Apple Pay),Debit,113.63,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+56,November 2024,2024-11-23,Eddie Bauer,Halton Hills 020,Debit,50.85,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+57,November 2024,2024-11-23,JUST COZY,Georgetown 020 (Apple Pay),Debit,56.5,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+58,November 2024,2024-11-23,GC JERK TPO FOOD TRUCK,Halton Hills 020 (Apple Pay),Debit,14.12,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+59,November 2024,2024-11-21,Amazon,Www.Amazon.Ca020,Debit,31.65,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+60,November 2024,2024-11-21,Central Market,Toronto 020 (Apple Pay),Debit,5.49,Credit Card,Scotiabank_Gold_Amex_Card,Category: Groceries
+61,November 2024,2024-11-21,Uber Eats,Https://Help.020,Debit,22.65,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+62,November 2024,2024-11-19,Uber Eats,Https://Help.020,Debit,21.88,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+63,November 2024,2024-11-17,Amazon,Amazon.Ca 020,Debit,25.9,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+64,November 2024,2024-11-16,Presto,Toronto 020 (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+65,November 2024,2024-11-16,Uber Eats,Https://Help.020,Debit,39.13,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+66,November 2024,2024-11-16,Amazon,Www.Amazon.Ca020,Debit,42.12,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+67,November 2024,2024-11-16,Amazon,Www.Amazon.Ca020,Debit,33.89,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+68,November 2024,2024-11-15,Presto,Toronto 020 (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Category: Transportation
+69,November 2024,2024-11-15,Uber Eats,Https://Help.020,Debit,22.65,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+70,November 2024,2024-11-14,Amazon,Amazon.Ca 020,Debit,14.68,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+71,November 2024,2024-11-14,PAYMENT FROM - *****04*58,86,Credit,-250.0,Credit Card,Scotiabank_Gold_Amex_Card,Category: Miscellaneous
+72,November 2024,2024-11-13,THE BIRYANIWALLA THE BIRY,Toronto 020 (Apple Pay),Debit,20.33,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+73,November 2024,2024-11-13,Uber Eats,Https://Help.020,Debit,46.71,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+74,November 2024,2024-11-13,Uber Eats,Https://Help.020,Debit,20.5,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+75,November 2024,2024-11-12,Uber Eats,Https://Help.020,Debit,24.75,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+76,November 2024,2024-11-12,SCOTIA CREDIT CARD PROTEC,Tion Tax,Debit,0.83,Credit Card,Scotiabank_Gold_Amex_Card,Category: Miscellaneous
+77,November 2024,2024-11-12,SCOTIA CREDIT CARD PROTEC,Tion,Debit,10.32,Credit Card,Scotiabank_Gold_Amex_Card,Category: Miscellaneous
+78,November 2024,2024-11-09,Presto,Toronto 020 (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+79,November 2024,2024-11-09,Ardene,Scarborough 020 (Apple Pay),Debit,21.36,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+80,November 2024,2024-11-09,MINERVA TIFFINS,Scarborough 020 (Apple Pay),Debit,37.26,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+81,November 2024,2024-11-08,Amazon,020,Credit,-22.58,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+82,November 2024,2024-11-07,Presto,Toronto 020 (Apple Pay),Debit,3.3,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+83,November 2024,2024-11-07,Amazon,Amazon.Ca 020,Debit,19.21,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+84,November 2024,2024-11-07,Winners,Toronto 020 (Apple Pay),Debit,3.05,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+85,November 2024,2024-11-06,Amazon,Www.Amazon.Caon,Debit,39.99,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+86,November 2024,2024-11-06,Amazon,Www.Amazon.Caon,Debit,22.59,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+87,November 2024,2024-11-06,Amazon,Www.Amazon.Caon,Credit,-159.32,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+88,November 2024,2024-11-06,Uber Eats,Https://Help.On,Debit,19.43,Credit Card,Scotiabank_Gold_Amex_Card,Dining and Restaurants
+89,November 2024,2024-11-05,Amazon,Www.Amazon.Caon,Debit,49.71,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+90,November 2024,2024-11-05,McDonald's,Toronto On (Apple Pay),Debit,21.55,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+91,November 2024,2024-11-05,Presto,Toronto On (Apple Pay),Debit,9.9,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+92,November 2024,2024-11-05,Amazon,On,Credit,-98.29,Credit Card,Scotiabank_Gold_Amex_Card,Shopping
+93,November 2024,2024-11-05,Walmart,Toronto On (Apple Pay),Debit,114.82,Credit Card,Scotiabank_Gold_Amex_Card,Category: Groceries
+94,November 2024,2024-11-05,THE DANISH PASTRY HOUSE,Burlington On (Apple Pay),Debit,4.46,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+95,November 2024,2024-11-05,Tim Hortons,Toronto On (Apple Pay),Debit,2.61,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+96,November 2024,2024-11-04,Amazon,Www.Amazon.Caon,Debit,45.19,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
+97,November 2024,2024-11-04,          FROM - *****04*5886,,Credit,-800.0,Credit Card,Scotiabank_Gold_Amex_Card,Category: Miscellaneous
+98,November 2024,2024-11-03,Freshco,Toronto On (Apple Pay),Debit,15.33,Credit Card,Scotiabank_Gold_Amex_Card,Category: Groceries
+99,November 2024,2024-11-03,Presto,Toronto On (Apple Pay),Debit,3.3,Credit Card,Scotiabank_Gold_Amex_Card,Transportation
+100,November 2024,2024-11-03,SERANO BAKERY,Toronto On,Debit,73.0,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+101,November 2024,2024-11-03,Uber Eats,Https://Help.On,Debit,34.02,Credit Card,Scotiabank_Gold_Amex_Card,Category: Dining and Restaurants
+102,November 2024,2024-11-02,Presto,Toronto On (Apple Pay),Debit,6.6,Credit Card,Scotiabank_Gold_Amex_Card,Category: Transportation
+103,November 2024,2024-11-02,Urban Planet,Toronto On (Apple Pay),Debit,136.73,Credit Card,Scotiabank_Gold_Amex_Card,Category: Shopping
