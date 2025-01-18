@@ -1,124 +1,46 @@
-"This module processes csv files with transactions"
-
-import pandas as pd
-import re
-import logging
 from typing import Optional
+import pandas as pd
+from data_processing.abstract_processor import FileProcessor
+from src.utils.file_utils import load_config
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+config = load_config("configs/file_config.json")
 
-# TODO: ADD THIS IN CONFIG FILE
-col_names = ['MonthYear', 'Date', 'Description', 'SubDescription', 'TransactionType', 'Amount', 'AccountType', 'AccountName']
 
-class CSVProcessor:
-    def __init__(self, file_path: str):
-        self.file_path = file_path
-        self.df: Optional[pd.DataFrame] = None
+class CSVProcessor(FileProcessor):
+	"""This class defines methods used to process CSV files"""
+	def __init__(self, file_path:str):
+		self.file_path = file_path
+		self.df: Optional[pd.DataFrame] = None
 
-    def load_csv(self):
-        try:
-            logging.info(f"Loading CSV file: {self.file_path}")
-            self.df = pd.read_csv(self.file_path)
-        except FileNotFoundError:
-            logging.error(f"File not found: {self.file_path}")
-            raise
-        except Exception as e:
-            logging.error(f"Error loading CSV file: {e}")
-            raise
-        return self.df
+	def read_file(self):
+		try:
+			self.df = pd.read_csv(self.file_path)
+		except FileNotFoundError as e:
+			raise FileNotFoundError from e
+		except Exception as e:
+			raise f'Exception {e} was raised'
+		return(self.df)
 
-    def drop_columns(self, columns: list):
-        if self.df is None:
-            raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
+	def validate_dataframe(self):
+		if self.df.empty:
+			raise f"Dataframe imported from path: [{self.file_path}] is empty. No further processing will be done"
+		elif config['REQUIRED_COLS'] not in self.df.columns:
+			raise f"One or more of columns {config['REQUIRED_COLS']} are missing"
+		else:
+			return (self.df)
 
-        logging.info(f"Dropping columns: {columns}")
-        self.df = self.df.drop(columns=columns, errors='ignore')  # Avoid errors for missing columns
-        return self.df
+	def get_account_name(self):
+		account_name = [account_name for account_name, keywords in config['ACCOUNT_KEY_WORDS'] if keywords in self.file_path]
+		return (account_name[0])
 
-    def add_month_col(self):
-        if self.df is None:
-            raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
+	def add_column(self, col_name, col_value):
+		if col_name in self.df.columns:
+			raise f'Column {col_name} is already present in the dataframe'
 
-        try:
-            self.df.insert(loc=0, column="MonthYear", value= self.df["Filter"].iloc[0].split(",")[0])
-            logging.info("Added Month_Year column.")
-        except KeyError:
-            logging.error("Column 'Filter' is missing in the DataFrame.")
-            raise
-        except Exception as e:
-            logging.error(f"Error adding Month_Year column: {e}")
-            raise
-        return self.df
+		self.df[col_name] = col_value
+		return (self.df)
 
-    def add_account_type(self):
-        if self.df is None:
-            raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
+	def remove_column(self, col_name):
+		self.df = self.df.drop(columns=col_name, errors='ignore')  # Avoid errors for missing columns
+		return (self.df)
 
-        account_type = "Chequing" if "debit_accounts" in self.file_path else "Credit Card"
-        self.df["AccountType"] = account_type
-        logging.info(f"Added Account_Type column with value: {account_type}")
-        return self.df
-
-    def add_account_name(self):
-        if self.df is None:
-            raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
-
-        file_name = self.file_path.split('/')[-1]  # Get file name from path
-        match = re.match(r'^(.*?)(?=_\d)', file_name)
-
-        if match:
-            account_name = match.group(1)
-            self.df["AccountName"] = account_name
-            logging.info(f"Added Account_Name column with value: {account_name}")
-        else:
-            logging.warning("Could not extract account name from file name.")
-        return self.df
-
-    def validate_dataframe(self):
-        if self.df is None:
-            raise ValueError("DataFrame is not loaded. Please load the CSV file first.")
-
-        logging.info("Validating DataFrame.")
-        if self.df.empty:
-            logging.warning("The DataFrame is empty.")
-        return self.df
-
-# Workflow function to process CSV files
-def process_csv(file_path: str) -> pd.DataFrame:
-    processor = CSVProcessor(file_path)
-
-    # Load the CSV file
-    df = processor.load_csv()
-
-    # Validate the DataFrame
-    df = processor.validate_dataframe()
-
-    # Add account type, account name and month/year info
-    df = processor.add_account_type()
-    df = processor.add_account_name()
-    df = processor.add_month_col()
-
-    # Drop columns based on file type
-    if "debit_accounts" in file_path:
-        df = processor.drop_columns(["Filter", "Balance" ])
-        #print(df.columns)
-    else:
-        df = processor.drop_columns(["Filter", "Status"])
-        print(df.columns)
-
-	#rename cols to align with table col names
-    df.columns = col_names
-
-    logging.info("CSV processing completed.")
-    return df
-
-# Example Usage
-if __name__ == "__main__":
-    file_path = "data/debit_accounts/Preferred_Package_5886_010525.csv"  # Replace with actual path
-
-    try:
-        processed_df = process_csv(file_path)
-        print(processed_df.head())
-    except Exception as e:
-        logging.error(f"An error occurred during processing: {e}")
