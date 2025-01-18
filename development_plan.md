@@ -9,6 +9,7 @@
 - Format account name
 - Convert Date column to datetime
 - Add function to validate CSV files
+- Abstract the methods so the methods can be expanded to support other file types
 
 **Modularization and Standardization:**
 - Functions to prepare data for ingestion into tables (in the new model)
