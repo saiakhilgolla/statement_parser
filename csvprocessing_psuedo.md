@@ -88,7 +88,13 @@
 			drop col_name
 			return df
 
+		FUNC add_balance_col(df)
+			IF  account type = credit
+				add a balance column with NULL
+			return df
 
+
+----------------- --------------------- ---------------
 		FUNC add_account_name(file path)
 			df[accout name] = get_account_name (file path)
 
@@ -96,10 +102,7 @@
 			ACCOUNT TYPE CONFIG: {account name: accout type}
 			df[account type] = account type config[df.account_name]
 
-		FUNC add_balance_col(df)
-			IF  account type = credit
-				add a balance column with NULL
-			return df
+
 
 
 
