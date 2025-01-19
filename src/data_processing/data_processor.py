@@ -1,8 +1,7 @@
-from data_processing.abstract_processor import FileProcessor
-from data_processing.csv_processor import CSVProcessor
-from src.utils.path_utils import get_file_list
-from src.utils.file_utils import load_config
 import numpy as np
+from data_processing.file_processors import FileProcessor, CSVProcessor
+from src.utils.file_utils import load_config
+
 
 config = load_config("config/file_config.json")
 
