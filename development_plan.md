@@ -11,10 +11,12 @@
 - Add function to validate CSV files
 - Abstract the methods so the methods can be expanded to support other file types
 
+
 **Modularization and Standardization:**
 - Functions to prepare data for ingestion into tables (in the new model)
 - Standardize methods to request data from this module
 - Standardize the data output from this module
+- Enforce table schemas before ingesting data into tables
 
 **Debit Card Transaction Processing:**
 - Come up with a strategy to identify Credit Card bill payments and ignore them from expenses
