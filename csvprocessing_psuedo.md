@@ -32,6 +32,8 @@
 				- get_account_name
 				- add_col(account name,  value)
 				- add_col (account type, value)
+				- if account_type = credit
+					- add_col('Balance', NULL)
 				- remove_col (col_name)
 				- add_balance_col()
 
