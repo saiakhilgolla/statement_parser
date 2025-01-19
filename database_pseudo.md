@@ -1,0 +1,8 @@
+- setup database
+- setup the model
+	- create tables
+	- create relationships
+- crud operations
+	- add data
+	- update rows
+	- fetch rows
