@@ -1,8 +1,55 @@
-- setup database
-- setup the model
-	- create tables
-	- create relationships
-- crud operations
-	- add data
-	- update rows
-	- fetch rows
+## setup database
+	Initialize session to connect and communicate with DB
+
+## Set up the model
+	- class category
+		- define a class to create table, columns and table relationship
+			- Columns:
+				- Category ID - Integer - Primary Key - Unique - Non Null
+				- Category/Sub-Category Name - String - Unique
+				- Parent Category ID - Integer
+			- Relationships:
+				- one-to-many relationship with Transactions table
+
+		- Define the following methods:
+			- read categories
+			- insert new category
+			- update a category name
+			- delete a category
+
+	- class accounts
+		- define a class to create table, columns and table relationship
+			- Columns:
+				- Account ID - Integer - Primary Key - Unique - Non Null
+				- Account Name - String - Unique
+				- Account Type - String
+				- Account User - String
+			- Relationships:
+				- one-to-many relationship with Transactions table
+
+		- Define the following methods:
+			- read accounts
+			- insert new account
+			- update account info
+			- delete an account
+
+	- class transactions
+		- define a class to create table, columns and table relationship
+			- Columns:
+				- Transaction ID - Integer - Unique - Primary Key - Non Null
+				- Account ID - Integer - Foreign Key
+				- Date - Date - Non Null
+				- Description - String
+				- SubDescription - String
+				- TransactionType - String
+				- Amount - Float
+				- Balance - Float
+				- Category ID - Integer - Foreign Key
+			- Relationships:
+				- many-to-one relationship with accounts table
+				- many-to-one relationship with category table
+		- Define the following methods:
+			- read transactions
+			- insert new transactions
+			- update transactions
+			- delete transactions
