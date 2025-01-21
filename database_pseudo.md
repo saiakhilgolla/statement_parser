@@ -10,9 +10,9 @@
 				- Parent Category ID - Integer
 			- Relationships:
 				- one-to-many relationship with Transactions table
-
+		- **Add an index to category ID??**
 		- Define the following methods:
-			- read categories
+			- get categories
 			- insert new category
 			- update a category name
 			- delete a category
@@ -26,9 +26,9 @@
 				- Account User - String
 			- Relationships:
 				- one-to-many relationship with Transactions table
-
+		- **Add an index to category ID??**
 		- Define the following methods:
-			- read accounts
+			- get accounts
 			- insert new account
 			- update account info
 			- delete an account
@@ -53,3 +53,11 @@
 			- insert new transactions
 			- update transactions
 			- delete transactions
+
+## Prepare data for ingesting into tables
+	- FUNC check_new_categories
+		- get_categories
+		- if unique categories not in get_categories
+			- insert_new_category
+		- else:
+			ignore
