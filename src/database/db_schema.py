@@ -1,7 +1,7 @@
 from sqlalchemy.ext.declarative import as_declarative
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Date
-from abc import ABC, abstractmethod
+from abc import ABC
 
 # create a base class which the table class will inherit
 @as_declarative
