@@ -1,7 +1,7 @@
 import os
 from data_processing.csv_process_OLD import process_csv
 from src.data_categorization.gpt_categorizer import CategorizeTransaction
-from src.database.db_operations import insert_transactions
+from database.db_operations_old import insert_transactions
 from src.utils.path_utils import get_file_list, validate_file_list
 from src.database.db_connector import get_sqlite3_connector
 

@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-from src.database.db_operations import fetch_transactions_data, get_total_monthly_expense
+from database.db_operations_old import fetch_transactions_data, get_total_monthly_expense
 import matplotlib.pyplot as plt
 from datetime import datetime
 
