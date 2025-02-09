@@ -1,4 +1,4 @@
-from database.db_config import engine, Base
+from db_config import engine, Base
 
 def initialize_db():
 	# TODO: Add a check to see if the tables already exist.
@@ -8,6 +8,5 @@ def initialize_db():
 	print("Tables created successfully")
 
 if __name__ == "__main__":
-
 	#initialize tables
 	initialize_db()
