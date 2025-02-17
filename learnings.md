@@ -10,3 +10,4 @@
 # Programming:
 1. Using abstract classes
 2. Apply factory pattern
+3. Use of Generic Classes

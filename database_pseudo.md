@@ -11,11 +11,7 @@
 			- Relationships:
 				- one-to-many relationship with Transactions table
 		- **Add an index to category ID??**
-		- Define the following methods:
-			- get categories
-			- insert new category
-			- update a category name
-			- delete a category
+
 
 	- class accounts
 		- define a class to create table, columns and table relationship
@@ -27,11 +23,7 @@
 			- Relationships:
 				- one-to-many relationship with Transactions table
 		- **Add an index to category ID??**
-		- Define the following methods:
-			- get accounts
-			- insert new account
-			- update account info
-			- delete an account
+
 
 	- class transactions
 		- define a class to create table, columns and table relationship
@@ -48,11 +40,36 @@
 			- Relationships:
 				- many-to-one relationship with accounts table
 				- many-to-one relationship with category table
-		- Define the following methods:
-			- read transactions
-			- insert new transactions
-			- update transactions
-			- delete transactions
+
+
+## functions to perfrom crud operations on db
+transactions Input
+accounts input
+categories input
+
+
+CLASS CRUDOperations(Generic[model, schema]):
+	def add_records ():
+
+	def delete_records():
+
+	def update_records():
+
+
+add transaction
+get transactions
+update transaction
+delete transaction
+
+add account
+get account
+update account
+delete account
+
+add category
+get category
+update category
+delete category
 
 ## Prepare data for ingesting into tables
 	- FUNC check_new_categories

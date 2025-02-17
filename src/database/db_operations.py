@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
-from database.db_schema import Transactions, Categories, Accounts
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from datetime import date
-from typing import Optional
+from typing import Optional, TypeVar, Generic, Type
 
-# class to enforce input schema before adding data into Transactions table
+
+# Class to enforce input schema before adding data into Transactions table
 class TransactionsInput(BaseModel):
     date: date
     description: str
@@ -15,45 +15,53 @@ class TransactionsInput(BaseModel):
     account_id: int
     category_id: int
 
-#class to enforce input schema before adding input into accounts table
-class AccountsInput (BaseModel):
+# Class to enforce input schema before adding input into Accounts table
+class AccountsInput(BaseModel):
     account_name: str
     account_type: str
     account_user: str
 
+# Class to enforce input schema before adding input into Categories table
 class CategoryInput(BaseModel):
     category_name: str
     parent_id: Optional[str] = None
 
-# Add a new transaction
-def add_transaction(db: Session, transaction_data: TransactionsInput):
-    new_transaction = Transactions(**transaction_data.model_dump()) #converts TransactionsInput instance to a dict
-    db.add(new_transaction)
-    db.commit()
-    db.refresh(new_transaction)
-    return new_transaction
+# Define types for model and schema
+ModelType = TypeVar("ModelType")
+SchemaType = TypeVar("InputSchema", bound=BaseModel)
 
-# Get all transactions
-def get_transactions(db: Session):
-    return db.query(Transactions).all()
+# Class to define CRUD operations
+class CRUDOperations(Generic[ModelType, SchemaType]):
+    def __init__(self, model: Type[ModelType]):
+        self.model = model
 
+    def add_records(self, local_session: Session, input_obj: SchemaType):
+        """Add a new record to the table."""
+        model_instance = self.model(**input_obj.model_dump())
+        local_session.add(model_instance)
+        local_session.commit()
+        local_session.refresh(model_instance)
+        return model_instance
 
-# Update an existing transaction
-def update_transaction(db: Session, transaction_id: int, update_data: dict):
-    transaction = db.query(Transactions).filter(Transactions.transaction_id == transaction_id).first()
-    if not transaction:
-        return None
-    for key, value in update_data.items():
-        setattr(transaction, key, value)
-    db.commit()
-    db.refresh(transaction)
-    return transaction
+    def delete_records(self, local_session: Session, id: int):
+        """Delete a record by ID."""
+        model_instance = local_session.query(self.model).filter(self.model.id == id).first()
+        if model_instance:
+            local_session.delete(model_instance)
+            local_session.commit()
+        return
 
-# Delete a transaction
-def delete_transaction(db: Session, transaction_id: int):
-    transaction = db.query(Transactions).filter(Transactions.transaction_id == transaction_id).first()
-    if not transaction:
-        return None
-    db.delete(transaction)
-    db.commit()
-    return transaction
+    def update(self, local_session: Session, id: int, update_input: dict):
+        """Validate and update an existing record."""
+        # Find the model instance/row to update using ID
+        model_instance = local_session.query(self.model).filter(self.model.id == id).first()
+        if model_instance:
+            # Update columns/attributes in the model
+            for field, value in update_input.items():
+                setattr(model_instance, field, value)
+            local_session.commit()
+            local_session.refresh(model_instance)
+        return model_instance
+
+# TODO: Add created_at and updated_at timestamps to table schema
+# TODO: Add function to find "id" based on other atrributes such as date, description etc?
