@@ -5,7 +5,7 @@ from src.utils.file_utils import load_config
 
 config = load_config("config/file_config.json")
 
-class FileProcessorFactory(FileProcessor):
+class FileProcessorFactory:
 	"""This class assigns appropriate file processor depending on file type"""
 
 	@staticmethod
