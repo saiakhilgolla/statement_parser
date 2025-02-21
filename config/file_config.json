@@ -1,5 +1,5 @@
 {
-	"REQUIRED_COLS":["Date", "Description", "TransactionType", "Amount"],
+	"REQUIRED_COLS":["Date", "Description", "SubDescription", "TransactionType", "Amount"],
 	"ACCOUNT_KEY_WORDS":{
 		"Scotiabank Gold Amex": ["Scotiabank", "Gold", "Amex"],
 		"Scotiabank Scene Visa": ["Scene", "Visa"],
@@ -9,6 +9,11 @@
 		"Scotiabank Gold Amex": "Credit Card",
 		"Scotiabank Scene Visa": "Credit Card",
 		"Scotiabank Preferred Package": "Chequing Account"
+	},
+	"FILE_PATHS": {
+		"DEBIT_PATH": "data/debit_accounts",
+    	"CREDIT_PATH": "data/credit_accounts",
+    	"DB_PATH": "src/database/MonthlyExpenses.db"
 	}
 
 }
